@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiking🚶‍♀️‍➡️</title>
+    <style>
+      body {
+       background: linear-gradient(111.4deg, rgb(55, 168, 192) -0.2%, rgb(103, 187, 125) 100.2%);
+        text-align: justify;
+        font-family: monospace;
+        line-height: 2;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: -10px;
+      }
+      button {
+        display: block;
+        border-color: #53ab8b;
+        background: white;
+        padding: 12px;
+        margin: auto;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        transition: all 100ms ease-in-out;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      button:hover {
+        background: #53ab8b;
+        cursor: pointer;
+      }
+      .container {
+        background: white;
+        max-width: 550px;
+        margin: 15px auto;
+        border-radius: 8px;
+        padding: 25px;
+      }
+      footer {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        font-style: italic;
+      }
+      .theme {
+        background: black;
+        color: white;
+      }
+      .theme:hover {
+        background: white;
+        color: black;
+      }
+      .hiking-forest-picture {
+        border-radius: 20px;
+        transition: all 100ms ease-in-out;
+        width: 530px;
+        margin: 3px;
+      }
+      .hiking-forest-picture:hover {
+        filter: contrast(90%);
+        transform: scale(1.09);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 156px 180px 180px;
+        margin: 15px;
+        grid-gap: 8px;
+      }
+      .grid img {
+        border-radius: 18px;
+      }
+      .grid img:hover {
+        transform: scale(1.5);
+      }
+      .dark {
+        background: radial-gradient(circle at 10% 20%, rgb(98, 114, 128) 0%, rgb(52, 63, 51) 90.1%);
+        color: white;
+      }
+      .dark .container {
+        background: #444444;
+      }
+      .dark a {
+        color: #53ab8b;
+      }
+      .get-in-touch {
+        margin-top: 70px;
+      }
+      
+    </style>
+  </head>
+  <body class="dark">
+    <button class="theme">Dark theme</button>
+    <div class="container">
+      <h1>Hiking🚶‍♀️‍➡️</h1>
+      <h2>My favorite hobby</h2>
+      <a href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html?srsltid=AfmBOoqlTaa3sRvYu6gi2z020-ilViWlZglhaO7NekVkfszsb5B2X6G_" target="_blank">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/264/original/1.png?1728041267" alt="" class="hiking-forest-picture" />
+      </a>
+      <div class="grid">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/261/original/2.png?1728041233" alt="" />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/262/original/3.png?1728041245" alt="" />
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/146/263/original/4.png?1728041255" alt="" />
+      </div>
+      <p>
+        Hiking is a wonderful way to immerse yourself in the outdoors. Transported by your own two feet and carrying only what you need for the day on your back, you can discover the beauty of nature at whatever pace you're comfortable with. And, with a little planning and preparation, it's an activity that almost anyone can do.
+        <br><strong><a href="https://www.rei.com/learn/expert-advice/hiking-for-beginners.html?srsltid=AfmBOoqlTaa3sRvYu6gi2z020-ilViWlZglhaO7NekVkfszsb5B2X6G_" >Read on Expert Advice</a></strong></br>
+      </p>
+      <button class="get-in-touch"><strong>Find a Hiking partner</strong></button>
+    </div>
+    <footer>
+      Coded by <a href="https://www.shecodes.io/graduates/136306-siphosethu-nogemane">Siphosethu Nogemane</a> with HTML, CSS and JavaScript
+    </footer>
+    <script>
+      function getInTouch() {
+        let name = prompt("First Name and Last Name");
+        let contact = prompt("WhatsApp Number");
+
+        alert("Thanks " + name + ", we'll be in touch soon!");
+      }
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+
+      let getInTouchButton = document.querySelector(".get-in-touch");
+      getInTouchButton.addEventListener("click", getInTouch);
+    </script>
+  </body>
+</html>
